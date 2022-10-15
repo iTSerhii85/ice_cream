@@ -1,0 +1,158 @@
+
+/* Slideshow container */
+.slideshow-container {
+    width: 58%;
+    position: relative;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.reviews {
+    padding-bottom: 480px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.slider-wrapper {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.slider-wrapper__img {
+    width: 100px;
+}
+
+.slider__reviews {
+    background-color: #84A178;
+    border-radius: 10px;
+    text-align: center;
+    padding: 34px 39px;
+    margin-bottom: 30px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 255%;
+    text-align: center;
+    color: #FCFCFC;
+
+    @media (max-width: 767px) {
+        padding: 25px 20px;
+        height: 250px;
+    }
+}
+
+.slider__name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 186%;
+    text-align: center;
+    color: #131313;
+    margin-bottom: 14px;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #84A178;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media screen and (min-width:480px) {
+    .slideshow-container {
+        width: 280px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .slideshow-container {
+        width: 705px;
+    }
+
+    .slider-wrapper {
+        margin-bottom: 28px;
+    }
+
+    .slider__reviews {
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 186%;
+        letter-spacing: 0.04em;
+    }
+
+    .slider__name {
+        font-style: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .reviews {
+        padding-bottom: 200px;
+    }
+
+    .slideshow-container {
+        width: 968px;
+    }
+
+    .slider-wrapper {
+        margin-bottom: 32px;
+    }
+
+    .slider__reviews {
+        font-size: 16px;}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    color: white;
+  
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }

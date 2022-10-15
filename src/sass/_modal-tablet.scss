@@ -1,0 +1,245 @@
+// Модалка видео
+
+@media screen and (min-width: 768px) {
+  .modal-video {
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 568px;
+    height: 449px;
+    background: #fcfcfc;
+    border: 2px solid #f8d24e;
+    border-radius: 10px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__how {
+      font-family: 'Seymour One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      color: #131313;
+    }
+
+    &__play {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 448px;
+      height: 205px;
+      background-image: url(/src/images/modal/ice-cream.jpg);
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    &__text {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #131313;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .video {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-duration: 1s;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-duration: 1s;
+  }
+
+  @keyframes blinker {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Модалка карта
+
+@media screen and (min-width: 768px) {
+  .modal-map {
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 568px;
+    height: 458px;
+    background: #fcfcfc;
+    border: 2px solid #f8d24e;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__location {
+      font-family: 'Seymour One';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.21;
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      color: #131313;
+    }
+
+    &__map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 448px;
+      height: 260px;
+      background-image: url(/src/images/modal/PoltavaX.png);
+    }
+  }
+
+  .link-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 145px;
+    height: 42px;
+    margin-top: 32px;
+    background: #f8d24e;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    color: #131313;
+  }
+}
+
+// Модалка с благодарочкой
+
+@media screen and (min-width: 768px) {
+  .modal-thanks {
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 568px;
+    height: 668px;
+    background: #fcfcfc;
+    border: 2px solid #f8d24e;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+
+    &__interest {
+      margin-right: auto;
+      margin-left: auto;
+      width: 322px;
+      height: 84px;
+      font-family: 'Seymour One';
+      font-style: normal;
+      font-weight: 400;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      margin-top: 28px;
+      margin-bottom: 20px;
+      color: #131313;
+    }
+
+    &__text {
+      width: 448px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 24px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #131313;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    &__name-m,
+    &__phone-m,
+    &__email-m {
+      width: 368px;
+      height: 42px;
+      margin-bottom: 16px;
+      padding-left: 16px;
+      padding-bottom: 11px;
+      background: rgba(248, 210, 78, 0.1);
+      border: 1px solid #84a178;
+      border-radius: 10px;
+    }
+
+    &__comment-m {
+      padding-left: 12px;
+      padding-top: 8px;
+      padding-bottom: 39px;
+      width: 368px;
+      height: 84px;
+      background: rgba(248, 210, 78, 0.1);
+      border: 1px solid #84a178;
+      border-radius: 10px;
+    }
+  }
+
+  .submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 121px;
+    height: 42px;
+    background: #f8d24e;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #131313;
+    font-size: 14px;
+    line-height: 1,21;
+  }
+}

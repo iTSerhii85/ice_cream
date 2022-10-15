@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #fcfcfc;
+  --secondary-color: #131313;
+  --active-color: #f8d24e;
+  --active-color-shadow: rgba(248, 210, 78, 0.7);
+  --bg-color: #84a178;
+  --btn-hover-focus--color: #0a8817;
+  --btn-disabled-color: #ababab;
+}
+
+.overtext {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.23;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

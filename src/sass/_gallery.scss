@@ -1,0 +1,283 @@
+.proparallax__box {
+    display: flex;
+    justify-content: center;
+}
+
+#proparallax {
+    width: 279px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    min-height: 130px;
+    border-radius: 7.40681px;
+    margin-bottom: 80px;
+    margin-top: -24px;
+}
+
+#proparallax img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+ @keyframes parallax_one {
+
+     /* controls img.one movement */
+     0% {
+         /* .imageloaded */
+         height: 100%;
+         width: 100%;
+         left: 0;
+         opacity: 1;
+     }
+
+     /* .imagehold runs from 0 to 27.77% */
+     27.77% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+     }
+
+     27.78% {
+         /* .imagepreunload */
+         width: 100%;
+         left: 0;
+         right: 100%;
+     }
+
+     33.33% {
+         /* .imageunloaded */
+         height: 100%;
+         width: 0;
+         left: 0;
+         right: 0;
+         opacity: 1;
+     }
+
+     33.34% {
+         /* imageoff */
+         opacity: 0;
+     }
+
+     94.43% {
+         /* .imageon */
+         left: 0;
+         opacity: 0;
+     }
+
+     94.44% {
+         /* .imageinitial */
+         height: 100%;
+         width: 0;
+         left: 100%;
+         opacity: 1;
+     }
+
+     100% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+         opacity: 1;
+     }
+ }
+
+ @keyframes parallax_two {
+
+     /* controls img.two movement */
+     0% {
+         /* .imageoff */
+         opacity: 0;
+     }
+
+     27.77% {
+         /* .imageon */
+         left: 0;
+         opacity: 0;
+     }
+
+     27.78% {
+         /* .imageinitial */
+         width: 0;
+         height: 100%;
+         left: 100%;
+         opacity: 1;
+     }
+
+     33.33% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+     }
+
+     /* .imagehold runs from 33.34% - 61.10% */
+     61.10% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+     }
+
+     61.11% {
+         /* .imagepreunload */
+         width: 100%;
+         left: 0;
+         right: 100%;
+     }
+
+     66.67% {
+         /* .imageunloaded */
+         width: 0;
+         right: 0;
+         left: 0;
+         height: 100%;
+         opacity: 1;
+     }
+
+     66.68% {
+         /* .imageoff */
+         opacity: 0;
+     }
+
+     100% {
+         /* .imageoff */
+         opacity: 0;
+     }
+ }
+
+ @keyframes parallax_three {
+
+     /* controls img.three movement */
+     0% {
+         /* .imageoff */
+         opacity: 0;
+     }
+
+     61.10% {
+         /* .imageon */
+         opacity: 0;
+     }
+
+     61.11% {
+         /* .imageinitial */
+         width: 0;
+         height: 100%;
+         left: 100%;
+         opacity: 1;
+     }
+
+     66.67% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+     }
+
+     /* .imagehold runs from 66.67% - 94.43% */
+     94.43% {
+         /* .imageloaded */
+         width: 100%;
+         left: 0;
+     }
+
+     94.44% {
+         /* .imagepreunload */
+         width: 100%;
+         left: 0;
+         right: 100%;
+     }
+
+     100% {
+         /* imageunloaded */
+         width: 0;
+         right: 0;
+         left: 0;
+         height: 100%;
+         opacity: 1;
+     }
+ }
+
+ #proparallax img.one {
+     animation-name: parallax_one;
+     /* controls img.one movement */
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-duration: 18s;
+     animation-direction: forwards;
+     object-fit: cover;
+ }
+
+ #proparallax img.two {
+     animation-name: parallax_two;
+     /* controls img.two movement */
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-duration: 18s;
+     animation-direction: forwards;
+     object-fit: cover;
+ }
+
+ #proparallax img.three {
+     animation-name: parallax_three;
+     /* controls img.three movement */
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-duration: 18s;
+     animation-direction: forwards;
+     object-fit: cover;
+ }
+
+@media screen and (min-width: 480px) {
+  .gallery__container {
+    padding-bottom: 40px;
+  }
+    #proparallax {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 46%;
+        border-radius: 7.40681px;
+    }
+
+    #proparallax img {
+        position: absolute;
+        overflow: hidden;
+        object-fit: cover;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .gallery__container {
+    padding-bottom: 55px;
+    }
+
+    #proparallax {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        padding-top: 44%;
+        margin-top: -164px;
+    }
+
+    #proparallax img {
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+   
+}
+
+@media screen and (min-width: 1200px) {
+    #proparallax {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-top: 42%;
+        border-radius: 24px;
+        margin-top: -94;
+    }
+
+}

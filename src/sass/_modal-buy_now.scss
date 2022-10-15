@@ -1,0 +1,347 @@
+.backdrop-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    overflow-y: scroll;
+}
+
+.buy-now-modal {
+    position: absolute;
+    width: 280px;
+    height: 986px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 28px;
+}
+
+.is-hidden-modal {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-modal-close-buy-now {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.modal-title-form {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--secondary-color);
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.modal-form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 32px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+    padding-left: 12px;
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 12px;
+
+    &:invalid:not(:placeholder-shown){
+        border-color: #eb6758;
+    }
+}
+
+.modal-massage {
+    display: block;
+    width: 100%;
+    height: 64px;
+    padding: 8px 12px;
+    resize: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: var(--secondary-color);
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84A178;
+    border-radius: 10px;
+
+    &:invalid:not(:placeholder-shown) {
+        border-color: #eb6758;
+    }
+}
+
+.btn-modal-buy-now {
+    width: 114px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.chec-contet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-buy-now-chec {
+    margin-bottom: 84px;
+
+    &:last-child {
+            margin-bottom: 24px;
+        }
+}
+
+.modal-box {
+    display: block;
+    width: 132px;
+    height: 136px;
+    position: relative;
+    z-index: 100;
+    // border: 2px solid #96AF8C;
+    border-radius: 15.7808px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+    .modal-chec:checked + & {
+        background-color: var(--bg-color);
+    }
+
+    .modal-chec:focus+& {
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -55%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    }
+}
+
+
+
+.gradient-ice-cream {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.gradient-ice-coffee {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #EFD478;
+    border-radius: 50%;
+
+    background: #EFD478;
+    border: 2px solid #EFD478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.gradient-milkshake {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #EFD478;
+    border-radius: 50%;
+
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+.modal-checbox-item-ice-cream {
+    border: 2px solid #96AF8C;
+
+    &::before {
+        z-index: 10;
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_ice-cream.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width:10px),
+screen and (min-resolution: 192dpi) and (min-width:10px),
+screen and (min-resolution: 2dppx) and (min-width:10px) {
+    .modal-checbox-item-ice-cream::before{
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_ice-cream@2x.jpg);
+    }
+}
+
+
+.modal-checbox-item-ice-coffee{
+    border: 2px solid #EFD478;
+
+    .modal-chec:checked+& {
+        background-color: #EFD478;
+    }
+
+    &::before {
+        z-index: 10;
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_ice-coffee.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width:10px),
+screen and (min-resolution: 192dpi) and (min-width:10px),
+screen and (min-resolution: 2dppx) and (min-width:10px) {
+    .modal-checbox-item-ice-coffee::before {
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_ice-coffee@2x.jpg);
+    }
+}
+
+.modal-checbox-item-milkshake{
+    border: 2px solid #D6936D;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+
+
+    .modal-chec:checked+& {
+        background-color: #D6936D;
+    }
+
+    &::before {
+        z-index: 10;
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_milkshake.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width:10px),
+screen and (min-resolution: 192dpi) and (min-width:10px),
+screen and (min-resolution: 2dppx) and (min-width:10px) {
+    .modal-checbox-item-milkshake::before {
+        background-image: url(../images/modal-buy-mow/img-items-modal-buy-now_milkshake@2x.jpg);
+    }
+}
+
+.text-checbox {
+    position: absolute;
+    bottom: 20px;
+    left: 14px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.center-inp{
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .center-inp {
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+
+    .buy-now-modal {
+        width: 568px;
+        height: 644px;
+        padding: 32px 54px;
+    }
+
+    .chec-contet {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .box-buy-now-chec {
+        margin-bottom: 0;
+
+        &:last-child {
+        margin-bottom: 0;
+        }
+    }
+
+        .modal-form-input{
+            width: 368px;
+        }
+
+        .modal-massage {
+            width: 368px;
+            height: 84px;
+        }
+
+        .modal-title-form{
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 120px;
+        }
+}
+
+
